@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   plugins: [
     react(),
-    tsconfigPaths() // Add this plugin to help Vite resolve TypeScript paths
+    tsconfigPaths()
   ],
   build: {
     minify: 'terser',
