@@ -2,7 +2,6 @@ import axios from "axios";
 
 import { PexelSearchApiParams, PexelSearchCuratedApiParams, PexelsPhoto, PexelsResponse } from "./pexelsInterfaces";
 
-const API_KEY = "1RIIywOsHlxfuklqTwMlJtIOpcnPIflFZXt6D7FEulnYuM8sLDmJphp5";
 const BASE_URL = "https://api.pexels.com/v1/search";
 const BASE_URL_CURATED = "https://api.pexels.com/v1/curated";
 const BASE_URL_PHOTO = "https://api.pexels.com/v1/photos";
@@ -11,7 +10,7 @@ const fetchPhotos = async (url: string, params: object): Promise<PexelsPhoto[]> 
   try {
     const response = await axios.get<PexelsResponse>(url, {
       headers: {
-        Authorization: API_KEY,
+        Authorization: import.meta.env.VITE_API_KEY,
       },
       params,
     });
@@ -25,7 +24,7 @@ export const fetchPhoto = async (id: string) => {
   try {
     const response = await axios.get(`${BASE_URL_PHOTO}/${id}`, {
       headers: {
-        Authorization: API_KEY,
+        Authorization: import.meta.env.VITE_API_KEY,
       },
     });
     const data = await response.data;
