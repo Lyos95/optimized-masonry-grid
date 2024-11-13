@@ -2,16 +2,7 @@
 
 export interface PexelsPhoto {
   id: number;
-  src: {
-    original: string;
-    large2x: string;
-    large: string;
-    medium: string;
-    small: string;
-    portrait: string;
-    landscape: string;
-    tiny: string;
-  };
+  src: PexelsPhotoSrc;
   width: number;
   height: number;
   photographer: string;
@@ -21,6 +12,17 @@ export interface PexelsPhoto {
   alt: string;
   url: string;
   liked: boolean;
+}
+
+export interface PexelsPhotoSrc {
+  original: string;
+  large2x: string;
+  large: string;
+  medium: string;
+  small: string;
+  portrait: string;
+  landscape: string;
+  tiny: string;
 }
 
 interface PexelApiBaseParams {
