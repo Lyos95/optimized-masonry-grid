@@ -105,7 +105,7 @@ cssCodeSplit: true,
 
 ![App Screenshot](assets/Performance.PNG)
 
-- **Virtualization**: The gallery uses React Virtualized to only render visible images, preventing excessive DOM nodes and improving performance.
+- **Virtualization**: The gallery uses Virtualization to only render visible images, preventing excessive DOM nodes and improving performance.
 
 - **Responsive Images**: The app loads different image resolutions based on screen size:
   - **Mobile**: Medium-sized images for smaller screens.
